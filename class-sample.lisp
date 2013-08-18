@@ -26,12 +26,12 @@
 (defun main ()
   (setq cls (make-instance 'cur-class))
   ;; アクセッサー
-  (princ (get-int cls))
-  (princ (get-char cls))		
-  (princ (get-super-int-a cls))		 ; スーパークラスAのスロット
-  (princ (get-super-int-b cls))		; スーパークラスBのスロット
+  (print (get-int cls))
+  (print (get-char cls))		
+  (print (get-super-int-a cls))		 ; スーパークラスAのスロット
+  (print (get-super-int-b cls))		; スーパークラスBのスロット
   ;; slot-valueによるアクセス
-  (princ (slot-value cls 'slot-int))	 ; アクセッサー有
-  (princ (slot-value cls 'slot-no-acc))) ; アクセッサー無
+  (print (slot-value cls 'slot-int))	 ; アクセッサー有
+  (print (slot-value cls 'slot-no-acc))) ; アクセッサー無
 
 (main)					; 実行
